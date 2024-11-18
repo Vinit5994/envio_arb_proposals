@@ -1,26 +1,37 @@
-type L2ArbitrumGovernor_Initialized {
+type TransparentUpgradeableProxy_AdminChanged {
+  id: ID!
+  previousAdmin: String!
+  newAdmin: String!
+}
+
+type TransparentUpgradeableProxy_BeaconUpgraded {
+  id: ID!
+  beacon: String!
+}
+
+type TransparentUpgradeableProxy_Initialized {
   id: ID!
   version: BigInt!
 }
 
-type L2ArbitrumGovernor_LateQuorumVoteExtensionSet {
+type TransparentUpgradeableProxy_LateQuorumVoteExtensionSet {
   id: ID!
   oldVoteExtension: BigInt!
   newVoteExtension: BigInt!
 }
 
-type L2ArbitrumGovernor_OwnershipTransferred {
+type TransparentUpgradeableProxy_OwnershipTransferred {
   id: ID!
   previousOwner: String!
   newOwner: String!
 }
 
-type L2ArbitrumGovernor_ProposalCanceled {
+type TransparentUpgradeableProxy_ProposalCanceled {
   id: ID!
   proposalId: BigInt!
 }
 
-type L2ArbitrumGovernor_ProposalCreated {
+type TransparentUpgradeableProxy_ProposalCreated {
   id: ID!
   proposalId: BigInt!
   proposer: String!
@@ -33,42 +44,47 @@ type L2ArbitrumGovernor_ProposalCreated {
   description: String!
 }
 
-type L2ArbitrumGovernor_ProposalExecuted {
+type TransparentUpgradeableProxy_ProposalExecuted {
   id: ID!
   proposalId: BigInt!
 }
 
-type L2ArbitrumGovernor_ProposalExtended {
+type TransparentUpgradeableProxy_ProposalExtended {
   id: ID!
   proposalId: BigInt!
   extendedDeadline: BigInt!
 }
 
-type L2ArbitrumGovernor_ProposalQueued {
+type TransparentUpgradeableProxy_ProposalQueued {
   id: ID!
   proposalId: BigInt!
   eta: BigInt!
 }
 
-type L2ArbitrumGovernor_ProposalThresholdSet {
+type TransparentUpgradeableProxy_ProposalThresholdSet {
   id: ID!
   oldProposalThreshold: BigInt!
   newProposalThreshold: BigInt!
 }
 
-type L2ArbitrumGovernor_QuorumNumeratorUpdated {
+type TransparentUpgradeableProxy_QuorumNumeratorUpdated {
   id: ID!
   oldQuorumNumerator: BigInt!
   newQuorumNumerator: BigInt!
 }
 
-type L2ArbitrumGovernor_TimelockChange {
+type TransparentUpgradeableProxy_TimelockChange {
   id: ID!
   oldTimelock: String!
   newTimelock: String!
 }
 
-type L2ArbitrumGovernor_VoteCast {
+type TransparentUpgradeableProxy_Upgraded {
+  id: ID!
+  implementation: String!
+}
+
+type TransparentUpgradeableProxy_VoteCast {
   id: ID!
   voter: String!
   proposalId: BigInt!
@@ -77,7 +93,7 @@ type L2ArbitrumGovernor_VoteCast {
   reason: String!
 }
 
-type L2ArbitrumGovernor_VoteCastWithParams {
+type TransparentUpgradeableProxy_VoteCastWithParams {
   id: ID!
   voter: String!
   proposalId: BigInt!
@@ -87,13 +103,13 @@ type L2ArbitrumGovernor_VoteCastWithParams {
   params: String!
 }
 
-type L2ArbitrumGovernor_VotingDelaySet {
+type TransparentUpgradeableProxy_VotingDelaySet {
   id: ID!
   oldVotingDelay: BigInt!
   newVotingDelay: BigInt!
 }
 
-type L2ArbitrumGovernor_VotingPeriodSet {
+type TransparentUpgradeableProxy_VotingPeriodSet {
   id: ID!
   oldVotingPeriod: BigInt!
   newVotingPeriod: BigInt!
